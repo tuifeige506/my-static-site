@@ -1,0 +1,56 @@
+/* 全局尺寸计算包含内边距和边框，更容易控制布局宽度。 */
+* { box-sizing: border-box; }
+ 
+/* 颜色变量统一管理；修改这些值可以给主页换主题。 */
+:root {
+  --paper: #f4f6f0;
+  --ink: #193b34;
+  --muted: #526a60;
+  --line: #d5e0d5;
+  --accent: #21705a;
+}
+ 
+/* 不依赖在线字体；中文与英文使用电脑本地可用字体。 */
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.8;
+}
+ 
+/* 内容有最大宽度；窄屏时留出左右边距。 */
+.page {
+  width: min(100% - 40px, 820px);
+  margin: 0 auto;
+  padding: 64px 0 32px;
+}
+ 
+/* 首页介绍右侧为徽章留位置；手机规则在文件末尾。 */
+.hero { position: relative; padding: 0 150px 32px 0; }
+.eyebrow { font-size: 12px; letter-spacing: 0.12em; color: var(--accent); }
+h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.25; margin: 16px 0; }
+h2 { font-size: 23px; line-height: 1.4; margin: 8px 0 16px; }
+.intro { color: var(--muted); }
+.badge { position: absolute; top: 32px; right: 0; }
+ 
+/* 卡片使用边框与浅色背景，不需要加载外部图片。 */
+.card {
+  padding: 28px;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+}
+ol { padding-left: 24px; }
+li + li { margin-top: 10px; }
+a { color: var(--accent); text-underline-offset: 4px; }
+footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
+ 
+/* 屏幕宽度不超过 540px 时，徽章进入正常文档流，避免覆盖文字。 */
+@media (max-width: 540px) {
+  .page { padding-top: 32px; }
+  .hero { padding-right: 0; }
+  .badge { position: static; margin-top: 16px; }
+  .card { padding: 20px; }
+}

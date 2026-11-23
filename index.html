@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- 声明使用现代 HTML。lang 帮助浏览器和辅助阅读工具识别语言。 -->
+<html lang="zh-CN">
+  <head>
+    <!-- UTF-8 避免中文乱码；viewport 让手机按设备宽度展示。 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title 出现在浏览器标签页，不是页面里的大标题。 -->
+    <title>颓废哥的内训学习主页</title>
+    <!-- ./ 表示与当前页面同目录；不写成 /style.css。 -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">QSC · LEARNING JOURNAL</p>
+        <!-- 替换“新同学”为自己愿意公开的昵称，不必填真实个人信息。 -->
+        <h1>你好，我是颓废哥。</h1>
+        <p class="intro">欢迎来到我的个人主页。这里记录我感兴趣的事情和最近的学习收获。</p>
+        <img src="./p.jpg" alt="这是一张配图" style="max-width: 100%; border-radius: 12px; margin-top: 20px;">
+        <!-- 图片同样使用相对路径；alt 在图片失败或使用读屏工具时提供说明。 -->
+        <img class="badge" src="./badge.svg" alt="代表终端与版本记录的学习徽章" width="112" height="112">
+      </header>
+ 
+      <section class="card" aria-labelledby="plan-title">
+        <p class="eyebrow">01 / LEARNING PLAN</p>
+        <h2 id="plan-title">我的学习路线</h2>
+        <!-- 三个列表项可以改成自己当前的学习进度。 -->
+        <ol>
+          <li>阅读一本感兴趣的书，记录值得回顾的想法。</li>
+          <li>学习一项新技能，把理解写成自己的说明。</li>
+          <li>整理最近的收获，定期更新这份主页。</li>
+        </ol>
+      </section>
+ 
+      <section class="card" aria-labelledby="review-title">
+        <p class="eyebrow">02 / FIELD NOTES</p>
+        <h2 id="review-title">今天解决了什么</h2>
+        <!-- 发布成功后，把这段占位文字改成一次真实的排错记录。 -->
+        <p>我正在学习区分“仓库里的文件”和“已经部署的网站”。下一次会把实际遇到的问题、定位依据和解决方法写在这里。</p>
+        <!-- 这是普通超链接；可以换成自己公开仓库的完整地址。 -->
+        <a href="https://github.com/QSCTech/training">阅读内训教材 →</a>
+      </section>
+ 
+      <footer>有没有优秀的百合作品？</footer>
+    </main>
+  </body>
+</html>
